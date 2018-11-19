@@ -16,7 +16,7 @@ docker-compose version 1.16.1, build 6d1ac21
 
 ## Building & Running the Application Stack
 
-To build application artifact and custom apache-flink image, you need to build an image via two staged `Dockerfile`. At first stage, application sources will be compiled and an `artifact` will be packaged. At second stage, a fresh custom apache-flink image will be backed.
+To build application artifact and custom apache-flink image, you need to build an image with a two staged `Dockerfile`. At first stage, application sources will be compiled and an `artifact` will be packaged. At second stage, a fresh custom apache-flink image will be backed.
 
 ```bash
 ➜  docker build . -t flink-case-image
