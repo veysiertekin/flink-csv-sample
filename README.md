@@ -74,8 +74,8 @@ total 96
 drwxr-xr-x   8 vertekin  110224528    256 Nov 19 23:28 .
 drwxr-xr-x  16 vertekin  110224528    512 Nov 19 23:42 ..
 -rw-r--r--@  1 vertekin  110224528  28208 Nov 16 19:20 case.csv
--rw-r--r--   1 vertekin  110224528   3876 Nov 19 23:28 task-1_product-interactions.csv
--rw-r--r--   1 vertekin  110224528     38 Nov 19 23:28 task-2_event-counts.csv
+-rw-r--r--   1 vertekin  110224528   3876 Nov 19 23:28 task-1_unique-product-views.csv
+-rw-r--r--   1 vertekin  110224528     38 Nov 19 23:28 task-2_unique-event-counts.csv
 -rw-r--r--   1 vertekin  110224528     14 Nov 19 23:28 task-3_top-five-users-fulfilled-all-events.csv
 -rw-r--r--   1 vertekin  110224528     30 Nov 19 23:28 task-4_event-counts-of-user-47.csv
 -rw-r--r--   1 vertekin  110224528     24 Nov 19 23:28 task-5_product-views-of-user-47.csv
@@ -112,11 +112,13 @@ total 64
 drwxr-xr-x   8 vertekin  110224528    256 Nov 19 23:48 .
 drwxr-xr-x  16 vertekin  110224528    512 Nov 19 23:48 ..
 -rw-r--r--@  1 vertekin  110224528  28208 Nov 16 19:20 case.csv
-drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-1_product-interactions.csv
-drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-2_event-counts.csv
+drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-1_unique-product-views.csv
+drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-2_unique-event-counts.csv
 -rw-r--r--   1 vertekin  110224528     14 Nov 19 23:48 task-3_top-five-users-fulfilled-all-events.csv
 drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-4_event-counts-of-user-47.csv
 drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-5_product-views-of-user-47.csv
 ```
 
+## Tasks
 
+### 1 

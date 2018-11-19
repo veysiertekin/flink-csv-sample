@@ -18,8 +18,8 @@ object AnalyseTextFile {
     loadCaseCsvAsATableSource(config.csvFile, tableEnv, SOURCE_TABLE_NAME)
 
     Seq(
-      new ProductInteractionCounts(config.outputPath + "/task-1_product-interactions.csv"),
-      new EventCounts(config.outputPath + "/task-2_event-counts.csv"),
+      new UniqueProductViews(config.outputPath + "/task-1_unique-product-views.csv"),
+      new UniqueEventCounts(config.outputPath + "/task-2_unique-event-counts.csv"),
       new TopFiveUsersThatFulfilledAllEvents(config.outputPath + "/task-3_top-five-users-fulfilled-all-events.csv"),
       new EventsOfUserFortySeven(config.outputPath + "/task-4_event-counts-of-user-47.csv"),
       new ProductViewsOfUserFortySeven(config.outputPath + "/task-5_product-views-of-user-47.csv")

@@ -5,13 +5,16 @@ import org.apache.flink.table.api.scala.BatchTableEnvironment
 import org.apache.flink.table.sinks.CsvTableSink
 import org.bitbucket.veysiertekin.flinkcase.task.CaseTask
 
-class EventCounts(outputFileName: String) extends CaseTask {
+class UniqueProductViews(outputFileName: String) extends CaseTask {
   override def register(tableEnv: BatchTableEnvironment, tableName: String): Unit = {
-    val eventCounts = tableEnv.scan(tableName)
-      .groupBy("eventName")
-      .select("eventName,eventName.count")
+    val uniqueProductViews = tableEnv.scan(tableName)
+      .where("eventName='view'")
+      .select("userId,productId")
+      .distinct()
+      .groupBy("productId")
+      .select("productId,productId.count")
 
     val sink = new CsvTableSink(path = outputFileName, fieldDelim = Some("|"), numFiles = None, writeMode = Some(FileSystem.WriteMode.OVERWRITE))
-    eventCounts.writeToSink(sink)
+    uniqueProductViews.writeToSink(sink)
   }
 }
