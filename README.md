@@ -36,19 +36,6 @@ Creating flink-case_taskmanager_1 ... done
 * Custom image contains the `case.csv` file and the `artifact` have been builded.
 * When Jobmanager is ready, a custom script will execute all the tasks mentioned in `technical-case` description **automatically** in **a single batch**, and will store all calculated outputs into `data/` dictionary.
 
-```bash
-➜  ls -la data/
-total 96
-drwxr-xr-x   8 vertekin  110224528    256 Nov 19 23:28 .
-drwxr-xr-x  16 vertekin  110224528    512 Nov 19 23:42 ..
--rw-r--r--@  1 vertekin  110224528  28208 Nov 16 19:20 case.csv
--rw-r--r--   1 vertekin  110224528   3876 Nov 19 23:28 task-1_product-interactions.csv
--rw-r--r--   1 vertekin  110224528     38 Nov 19 23:28 task-2_event-counts.csv
--rw-r--r--   1 vertekin  110224528     14 Nov 19 23:28 task-3_top-five-users-fulfilled-all-events.csv
--rw-r--r--   1 vertekin  110224528     30 Nov 19 23:28 task-4_event-counts-of-user-47.csv
--rw-r--r--   1 vertekin  110224528     24 Nov 19 23:28 task-5_product-views-of-user-47.csv
-```
-
 After all tasks have been completed, application stack could be shutted down. You may need to look at the logs to be ensure all tasks completed:
 
 ```bash
@@ -72,6 +59,22 @@ Removing flink-case_taskmanager_1 ... done
 Removing flink-case_jobmanager_1  ... done
 Removing network flink-case_flink-case-network
 ```
+
+Program results could be found under `data/` directory:
+
+```bash
+➜  ls -la data/
+total 96
+drwxr-xr-x   8 vertekin  110224528    256 Nov 19 23:28 .
+drwxr-xr-x  16 vertekin  110224528    512 Nov 19 23:42 ..
+-rw-r--r--@  1 vertekin  110224528  28208 Nov 16 19:20 case.csv
+-rw-r--r--   1 vertekin  110224528   3876 Nov 19 23:28 task-1_product-interactions.csv
+-rw-r--r--   1 vertekin  110224528     38 Nov 19 23:28 task-2_event-counts.csv
+-rw-r--r--   1 vertekin  110224528     14 Nov 19 23:28 task-3_top-five-users-fulfilled-all-events.csv
+-rw-r--r--   1 vertekin  110224528     30 Nov 19 23:28 task-4_event-counts-of-user-47.csv
+-rw-r--r--   1 vertekin  110224528     24 Nov 19 23:28 task-5_product-views-of-user-47.csv
+```
+
 
 ## Development Environment
 
