@@ -14,9 +14,15 @@ Client:
 docker-compose version 1.16.1, build 6d1ac21
 ```
 
+If you need to install this tools please take a look at this pages:
+
+[https://docs.docker.com/install/](https://docs.docker.com/install/)
+
+[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+
 ## Building & Running the Application Stack
 
-To build application artifact and custom apache-flink image, you need to build an image with a two staged `Dockerfile`. At first stage, application sources will be compiled and an `artifact` will be packaged. At second stage, a fresh custom apache-flink image will be backed.
+To build application artifact and a custom image, you need to use two staged `Dockerfile` under the project. At first stage, application sources will be compiled and an `artifact` will be packaged. At second stage, a fresh custom apache-flink image will be backed.
 
 ```bash
 ➜  docker build . -t flink-case-image
@@ -34,7 +40,7 @@ Creating flink-case_taskmanager_1 ... done
 
 
 * Custom image contains the `case.csv` file and the `artifact` have been builded.
-* When Jobmanager is ready, a custom script will execute all the tasks mentioned in `technical-case` description **automatically** in **a single batch**, and will store all calculated outputs into `data/` dictionary.
+* When Jobmanager is ready, a custom script will execute all tasks mentioned in `technical-case` requirements **automatically** in **a single batch**, and will store all calculated outputs into `data/` directory.
 
 After all tasks have been completed, application stack could be shutted down. You may need to look at the logs to be ensure all tasks completed:
 
@@ -49,7 +55,7 @@ jobmanager_1   | Job with JobID e3677e663b28e82fbdf41cf9850c6291 has finished.
 jobmanager_1   | Job Runtime: 5906 ms
 ```
 
-Then:
+Then stop all processes:
 
 ```bash
 ➜  docker-compose -p flink-case -f dc-flink-case.yml down -v
@@ -78,11 +84,11 @@ drwxr-xr-x  16 vertekin  110224528    512 Nov 19 23:42 ..
 
 ## Development Environment
 
-Application have been written with scala, therefore you need `sbt` tool to do any changes.
+Application have been written with scala, therefore you need `sbt` tool to build and run the application.
 
-`sbt` can be installed by following link: [https://www.scala-sbt.org/1.0/docs/Setup.html](https://www.scala-sbt.org/1.0/docs/Setup.html)
+`sbt` installation instructions can be found at following link: [https://www.scala-sbt.org/1.0/docs/Setup.html](https://www.scala-sbt.org/1.0/docs/Setup.html)
 
-After installation of `sbt`, application can be started by following command at the project root:
+After installation of `sbt`, application can be started manually under the project root:
 
 ```bash
 ➜  sbt "runMain org.bitbucket.veysiertekin.flinkcase.AnalyseTextFile --csvFile data/case.csv --outputPath data/"
