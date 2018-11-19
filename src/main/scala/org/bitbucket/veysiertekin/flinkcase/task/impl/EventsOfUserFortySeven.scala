@@ -7,12 +7,12 @@ import org.bitbucket.veysiertekin.flinkcase.task.CaseTask
 
 class EventsOfUserFortySeven(outputFileName: String) extends CaseTask {
   override def register(tableEnv: BatchTableEnvironment, tableName: String): Unit = {
-    val eventCountsOfUser47 = tableEnv.scan(tableName)
+    val eventCountsOfUserFortySeven = tableEnv.scan(tableName)
       .where("userId=47")
       .groupBy("eventName")
       .select("eventName,eventName.count")
 
     val sink = new CsvTableSink(path = outputFileName, fieldDelim = Some("|"), numFiles = None, writeMode = Some(FileSystem.WriteMode.OVERWRITE))
-    eventCountsOfUser47.writeToSink(sink)
+    eventCountsOfUserFortySeven.writeToSink(sink)
   }
 }
