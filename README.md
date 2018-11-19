@@ -121,4 +121,8 @@ drwxr-xr-x   6 vertekin  110224528    192 Nov 19 23:48 task-5_product-views-of-u
 
 ## Tasks
 
-### 1 
+#### 1- Unique Product View counts by ProductId
+#### 2- Unique Event counts
+#### 3- Top 5 Users who fulfilled all the events (view,add,remove,click)
+#### 4- All events of #UserId : 47
+#### 5- Product Views of #UserId : 47
