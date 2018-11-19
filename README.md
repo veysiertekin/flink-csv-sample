@@ -104,7 +104,7 @@ After installation of `sbt`, application can be started manually under the proje
 
 ```
 
-Also this command will execute all tasks directly and will produce a similar computing result (please ignore all warnings):
+Also this command will execute all tasks directly and will produce a similar computing results:
 
 ```bash
 ➜  ls -la data/                                                                                                 
