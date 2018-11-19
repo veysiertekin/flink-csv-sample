@@ -20,8 +20,7 @@ val flinkDependencies = Seq(
 
 lazy val root = (project in file(".")).
   settings(
-    libraryDependencies ++= flinkDependencies,
-    libraryDependencies += "org.rogach" % "scallop_2.11" % "3.1.4"
+    libraryDependencies ++= flinkDependencies
   )
 
 assembly / mainClass := Some("org.bitbucket.veysiertekin.flinkcase.AnalyseTextFile")

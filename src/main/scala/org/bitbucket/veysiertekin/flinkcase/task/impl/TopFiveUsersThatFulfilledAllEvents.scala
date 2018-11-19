@@ -4,7 +4,7 @@ import org.apache.flink.api.common.operators.Order
 import org.apache.flink.api.scala._
 import org.apache.flink.core.fs.FileSystem
 import org.apache.flink.table.api.scala.BatchTableEnvironment
-import org.bitbucket.veysiertekin.flinkcase.AnalyseTextFile._
+import org.bitbucket.veysiertekin.flinkcase.configuration.EnvConstants._
 import org.bitbucket.veysiertekin.flinkcase.task.CaseTask
 
 class TopFiveUsersThatFulfilledAllEvents(outputFileName: String) extends CaseTask {
