@@ -1,6 +1,6 @@
 ################################################
 #                                              #
-# 1. Stage: Build from sources                 #
+# Stage 1: Build from sources                 #
 #                                              #
 ################################################
 FROM mozilla/sbt:8u171_1.2.3 as builder
@@ -11,7 +11,7 @@ RUN sbt clean compile test package
 
 ################################################
 #                                              #
-# 2. Stage: Create Apache Flink Image with jar #
+# Stage 2: Create Apache Flink Image with jar #
 #                                              #
 ################################################
 FROM library/flink:1.6.2
